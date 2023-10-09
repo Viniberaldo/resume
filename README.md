@@ -1,3 +1,3 @@
 # Personal page
 
-Available in (here.)[https://viniberaldo.github.io/resume/]
+Available in [here.](https://viniberaldo.github.io/resume/)
