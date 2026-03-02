@@ -2,348 +2,615 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vinícius Beraldo — Software Developer & Chemical Engineer based in Paraná, Brazil.">
+  <meta name="author" content="Vinícius Beraldo">
+  <title>Vinícius Beraldo — Developer</title>
 
-  <title>- Vinícius Beraldo - </title>
-
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
     rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-    rel="stylesheet">
+
+  <!-- Font Awesome -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Devicons -->
   <link href="vendor/devicons/css/devicons.min.css" rel="stylesheet">
-  <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
-
+  <!-- Custom styles -->
+  <link href="css/resume.css" rel="stylesheet">
 </head>
 
 <body id="page-top">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Welcome !</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <!-- ===== LANGUAGE SWITCHER (fixed top-right on desktop) ===== -->
+  <div class="lang-switcher" id="langSwitcher">
+    <button class="lang-btn active" data-lang="en">EN</button>
+    <span class="lang-divider">|</span>
+    <button class="lang-btn" data-lang="pt">PT</button>
+    <span class="lang-divider">|</span>
+    <button class="lang-btn" data-lang="es">ES</button>
+  </div>
+
+  <!-- ===== SIDEBAR NAV ===== -->
+  <nav id="sideNav">
+
+    <!-- Mobile top bar -->
+    <div style="display:flex;align-items:center;justify-content:space-between;">
+      <a class="navbar-brand-mobile" href="#page-top">
+        VB <span style="font-weight:300;color:#7a6a55;">/ resume</span>
+      </a>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <!-- Language switcher inside mobile bar -->
+        <div class="lang-switcher-mobile">
+          <button class="lang-btn-sm active" data-lang="en">EN</button>
+          <button class="lang-btn-sm" data-lang="pt">PT</button>
+          <button class="lang-btn-sm" data-lang="es">ES</button>
+        </div>
+        <button class="navbar-toggler" id="navToggler" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Desktop profile block -->
+    <div class="nav-profile">
+      <img src="img/profile.jpg" alt="Vinícius Beraldo">
+      <span class="nav-name">Vinícius Beraldo</span>
+      <span class="nav-role" data-i18n="role">Software Developer</span>
+    </div>
+
+    <!-- Nav links -->
+    <div class="collapse" id="navLinks">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#Courses">Courses</a>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" data-i18n="nav.about">About</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience"
+            data-i18n="nav.experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education"
+            data-i18n="nav.education">Education</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills" data-i18n="nav.skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests"
+            data-i18n="nav.interests">Interests</a></li>
+        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#courses" data-i18n="nav.courses">Courses</a>
         </li>
       </ul>
     </div>
+
+    <!-- Social links (desktop sidebar footer) -->
+    <div class="nav-social">
+      <a href="https://www.linkedin.com/in/vinicius-beraldo" target="_blank" aria-label="LinkedIn"><i
+          class="fa fa-linkedin"></i></a>
+      <a href="https://github.com/Viniberaldo" target="_blank" aria-label="GitHub"><i class="fa fa-github"></i></a>
+      <a href="mailto:viniciusberaldo.eng@gmail.com" aria-label="E-mail"><i class="fa fa-envelope"></i></a>
+    </div>
+
   </nav>
 
+  <!-- ===== MAIN CONTENT ===== -->
   <div class="container-fluid p-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <!-- ── ABOUT ── -->
+    <section class="resume-section" id="about">
       <div class="my-auto">
-        <h1 class="mb-0">Vinícius
-          <span class="text-primary">Beraldo</span>
-        </h1>
-        <div class="subheading mb-5">Paraná · Brazil · +55 (45) 93618-7124 ·
-          <a href="mailto:viniciusberaldo.eng@gmail.com">viniciusberaldo.eng@gmail.com</a>
-        </div>
-        <p class="mb-5">I'm a software developer (also a chemical engineer) focused in backend. I want to write code
-          that I'm proud of and make positive change in the world through technology.</p>
-        <ul class="list-inline list-social-icons mb-0">
+        <p class="section-label" data-i18n="about.label">Hello, I'm</p>
+        <h1>Vinícius <span class="accent">Beraldo</span></h1>
 
-          <li class="list-inline-item">
-            <a href="https://www.linkedin.com/in/vinicius-beraldo" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
+        <div class="about-meta">
+          <span><i class="fa fa-map-marker"></i> Paraná, Brazil</span>
+          <span><i class="fa fa-phone"></i> +55 (45) 93618-7124</span>
+          <span><i class="fa fa-envelope"></i>
+            <a href="mailto:viniciusberaldo.eng@gmail.com">viniciusberaldo.eng@gmail.com</a>
+          </span>
+        </div>
+
+        <p class="about-bio" data-i18n="about.bio">
+          I'm a software developer — and a chemical engineer — focused on the backend.
+          I want to write code I'm proud of, and make a quiet, positive change in the
+          world through technology.
+        </p>
+
+        <!-- Social icons — visible on mobile only -->
+        <ul class="list-social-icons">
+          <li><a href="https://www.linkedin.com/in/vinicius-beraldo" target="_blank" aria-label="LinkedIn"><i
+                class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/Viniberaldo" target="_blank" aria-label="GitHub"><i
+                class="fa fa-github"></i></a></li>
+          <li><a href="mailto:viniciusberaldo.eng@gmail.com" aria-label="E-mail"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── EXPERIENCE ── -->
+    <section class="resume-section" id="experience">
+      <div class="my-auto">
+        <p class="section-label" data-i18n="experience.label">Work history</p>
+        <h2 data-i18n="nav.experience">Experience</h2>
+
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3 data-i18n="exp1.title">Software Developer</h3>
+            <div class="subheading" style="margin-bottom:0.5rem;">Alpha7 Desenvolvimento de Software</div>
+            <p data-i18n="exp1.desc">Backend developer in a desktop Java application for the pharmacy industry in
+              Brazil. Working on new features, bug fixes and onboarding of new team participants. Using Java 17,
+              PostgreSQL, SQLite, Git, Jira and agile frameworks.</p>
+          </div>
+          <div class="resume-date" data-i18n="exp1.date">Feb 2022 — Present</div>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3 data-i18n="exp2.title">Account Manager</h3>
+            <div class="subheading" style="margin-bottom:0.5rem;">Ultragaz S.A.</div>
+            <p data-i18n="exp2.desc">Supported customers through the full consuming experience, handling contract
+              management and review, technical infrastructure analysis and customer satisfaction.</p>
+          </div>
+          <div class="resume-date" data-i18n="exp2.date">Apr 2017 — Oct 2021</div>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3 data-i18n="exp3.title">Piping Assembly Engineer</h3>
+            <div class="subheading" style="margin-bottom:0.5rem;">BrasFELS</div>
+            <p data-i18n="exp3.desc">Supervisor of piping assembly teams in pipe rack modules. Resolved clashes with
+              electrical, instrumentation, outfitting and structural sectors. Executed design changes per client orders
+              and participated in vessel safety committee meetings.</p>
+          </div>
+          <div class="resume-date" data-i18n="exp3.date">Apr 2014 — Jul 2016</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── EDUCATION ── -->
+    <section class="resume-section" id="education">
+      <div class="my-auto">
+        <p class="section-label" data-i18n="education.label">Academic background</p>
+        <h2 data-i18n="nav.education">Education</h2>
+
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3>Faculdade Focus (CENES)</h3>
+            <div class="subheading" style="margin-bottom:2px;" data-i18n="edu.specialist">Specialist</div>
+            <div style="font-size:0.85rem;color:var(--muted);" data-i18n="edu1.field">Software Engineering</div>
+          </div>
+          <div class="resume-date">Sep 2024 — Feb 2025</div>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3>SENAI — Serviço Nacional de Aprendizagem Industrial</h3>
+            <div class="subheading" style="margin-bottom:2px;" data-i18n="edu.specialist">Specialist</div>
+            <div style="font-size:0.85rem;color:var(--muted);" data-i18n="edu2.field">Energy Efficiency in Industry
+            </div>
+          </div>
+          <div class="resume-date">Mar 2017 — Dec 2019</div>
+        </div>
+
+        <div class="resume-item">
+          <div class="resume-content">
+            <h3>Universidade Estadual de Maringá</h3>
+            <div class="subheading" style="margin-bottom:2px;" data-i18n="edu3.degree">Bachelor's Degree</div>
+            <div style="font-size:0.85rem;color:var(--muted);" data-i18n="edu3.field">Chemical Engineering</div>
+          </div>
+          <div class="resume-date">Feb 2009 — Dec 2013</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── SKILLS ── -->
+    <section class="resume-section" id="skills">
+      <div class="my-auto">
+        <p class="section-label" data-i18n="skills.label">What I work with</p>
+        <h2 data-i18n="nav.skills">Skills</h2>
+
+        <div class="subheading" style="margin-bottom:1rem;" data-i18n="skills.tools">Programming Languages &amp; Tools
+        </div>
+        <div class="skills-grid">
+          <span class="skill-chip"><i class="devicons devicons-linux" style="font-size:1rem;"></i> Linux</span>
+          <span class="skill-chip"><i class="devicons devicons-java" style="font-size:1rem;"></i> Java</span>
+          <span class="skill-chip"><i class="devicons devicons-javascript" style="font-size:1rem;"></i>
+            JavaScript</span>
+          <span class="skill-chip"><i class="devicons devicons-python" style="font-size:1rem;"></i> Python</span>
+          <span class="skill-chip"><i class="devicons devicons-git" style="font-size:1rem;"></i> Git</span>
+          <span class="skill-chip"><i class="devicons devicons-github_alt" style="font-size:1rem;"></i> GitHub</span>
+          <span class="skill-chip"><i class="devicons devicons-postgresql" style="font-size:1rem;"></i>
+            PostgreSQL</span>
+          <span class="skill-chip"><i class="devicons devicons-sqllite" style="font-size:1rem;"></i> SQLite</span>
+          <span class="skill-chip"><i class="devicons devicons-docker" style="font-size:1rem;"></i> Docker</span>
+        </div>
+
+        <div class="subheading" style="margin:2rem 0 1rem;" data-i18n="skills.profile">Coding profile</div>
+        <ul class="fa-ul">
+          <li><i class="fa fa-li fa-check fa-li"></i> <span data-i18n="skill1">Simple, clean and maintainable
+              code</span></li>
+          <li><i class="fa fa-li fa-check fa-li"></i> <span data-i18n="skill2">Unit tests &amp; debugging</span></li>
+          <li><i class="fa fa-li fa-check fa-li"></i> <span data-i18n="skill3">Happy to help other peers</span></li>
+          <li><i class="fa fa-li fa-check fa-li"></i> <span data-i18n="skill4">Agile development &amp; Scrum</span></li>
+          <li><i class="fa fa-li fa-check fa-li"></i> <span data-i18n="skill5">Remote Worker Certified</span></li>
+          <li><i class="fa fa-li fa-check fa-li"></i> <span data-i18n="skill6">Portuguese, English and Spanish
+              speaker</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ── INTERESTS ── -->
+    <section class="resume-section" id="interests">
+      <div class="my-auto">
+        <p class="section-label" data-i18n="interests.label">Beyond the screen</p>
+        <h2 data-i18n="nav.interests">Interests</h2>
+        <p data-i18n="interests.p1">Apart from being a developer, I enjoy most of my time being outdoors and exercising.
+          I enjoy resistance training, running and hobby carpentry. I like to travel to different countries and get in
+          contact with different people and cultures.</p>
+        <p data-i18n="interests.p2">When forced indoors, I follow a number of books, mostrly of sci-fi and fantasy.
+          I enjoy making a traditional Brazilian barbecue and spending time with my family and friends.
+          I spend a large amount of my free time exploring the latest advancements in back-end web development.</p>
+      </div>
+    </section>
+
+    <!-- ── COURSES ── -->
+    <section class="resume-section" id="courses">
+      <div class="my-auto">
+        <p class="section-label" data-i18n="courses.label">Learning &amp; growth</p>
+        <h2 data-i18n="nav.courses">Courses &amp; Certifications</h2>
+
+        <ul class="courses-list">
+          <li>
+            <span class="course-icon"><i class="fa fa-certificate"></i></span>
+            <div>
+              <strong data-i18n="course1.name">Remote Work Professional Certification</strong> — CertiProf International
+              <div class="course-meta" data-i18n="course1.meta">Issued Jun 2023 · Expires Jun 2026 · ID 86340518</div>
+            </div>
           </li>
-          <li class="list-inline-item">
-            <a href="https://github.com/Viniberaldo" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course2.name">Concepts and Best Practices with PostgreSQL</strong> — Digital Innovation
+              One
+              <div class="course-meta" data-i18n="course2.meta">Issued Sep 2022 · ID 6CCA2181</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course3.name">API REST with Spring Security</strong> — Digital Innovation One
+              <div class="course-meta" data-i18n="course3.meta">Issued Aug 2022 · ID C97520B4</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course4.name">Design Patterns with Java and Spring Boot</strong> — Digital Innovation
+              One
+              <div class="course-meta" data-i18n="course4.meta">Issued Aug 2022 · ID F63A0FF5</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course5.name">JPA and Hibernate</strong> — Digital Innovation One
+              <div class="course-meta" data-i18n="course5.meta">Issued Aug 2022 · ID 4AFCD6E0</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course6.name">Communication Protocols in the Internet</strong> — Digital Innovation One
+              <div class="course-meta" data-i18n="course6.meta">Issued Aug 2022 · ID 070472A7</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course7.name">API Fundamentals and HTTP Methods</strong> — Digital Innovation One
+              <div class="course-meta" data-i18n="course7.meta">Issued Jan 2022 · ID 0FAE1CE0</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course8.name">Linux Terminal</strong> — Prof. Diego Mariano
+              <div class="course-meta" data-i18n="course8.meta">Issued Jan 2022 · ID 83XN22</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-book"></i></span>
+            <div>
+              <strong data-i18n="course9.name">Data Structures in Java</strong> — Digital Innovation One
+              <div class="course-meta" data-i18n="course9.meta">Issued Dec 2021 · ID A05A1292</div>
+            </div>
+          </li>
+          <li>
+            <span class="course-icon"><i class="fa fa-certificate"></i></span>
+            <div>
+              <strong data-i18n="course10.name">Scrum Fundamentals Certified</strong> — SCRUMstudy
+              <div class="course-meta" data-i18n="course10.meta">Issued Jan 2016 · ID 102425</div>
+            </div>
           </li>
         </ul>
       </div>
     </section>
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-      <div class="my-auto">
-        <h2 class="mb-5">Experience</h2>
+  </div><!-- /container -->
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Software Developer</h3>
-            <div class="subheading mb-3">Alpha7 Desenvolvimento de Software</div>
-            <p>Backend developer in a desktop java application of the pharmacy industry in Brazil. Working on new
-              features, bug fixes and instruction for new team participants. Using Java 17, PostgreSQL, Git, Asana and
-              agile framework.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">February 2022 - Present</span>
-          </div>
-        </div>
+  <!-- ===== TRANSLATION DATA + SCRIPTS ===== -->
+  <script>
+    // ─── Translation dictionary ───────────────────────────────────────────────
+    const i18n = {
+      en: {
+        role: 'Software Developer',
+        'nav.about': 'About',
+        'nav.experience': 'Experience',
+        'nav.education': 'Education',
+        'nav.skills': 'Skills',
+        'nav.interests': 'Interests',
+        'nav.courses': 'Courses',
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Account Manager</h3>
-            <div class="subheading mb-3">Ultragaz S.A.</div>
-            <p>Support customers along the consuming experience, dealing with contract management and review; technical
-              infraestructure analisys and customer satisfation.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">April 2017 - October 2021</span>
-          </div>
-        </div>
+        'about.label': "Hello, I'm",
+        'about.bio': "I'm a software developer — and a chemical engineer — focused on the backend. I want to write code I'm proud of, and make a quiet, positive change in the world through technology.",
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Piping Assembly Engineer</h3>
-            <div class="subheading mb-3">BrasFELS</div>
-            <p>Supervisor of piping assembly teams in pipe rack module. Resolution of clash with other sectors of
-              project as eletrical and instrumentation, outfitting and structure. Orientation to primary activities and
-              safety procedures. Execution of design changes according to client's order and approval of new design with
-              quality assurance department. Revision and approval of hour appointment of the team in costs center.
-              Participation in vessel safety comitee coordination meeting to discuss improvements in safety aspects of
-              the project.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">April 2014 - July 2016</span>
-          </div>
-        </div>
+        'experience.label': 'Work history',
+        'exp1.title': 'Software Developer',
+        'exp1.desc': 'Backend developer in a desktop Java application for the pharmacy industry in Brazil. Working on new features, bug fixes and onboarding of new team participants. Using Java 17, PostgreSQL, SQLite, Git, Jira and agile frameworks.',
+        'exp1.date': 'Feb 2022 — Present',
+        'exp2.title': 'Account Manager',
+        'exp2.desc': 'Supported customers through the full consuming experience, handling contract management and review, technical infrastructure analysis and customer satisfaction.',
+        'exp2.date': 'Apr 2017 — Oct 2021',
+        'exp3.title': 'Piping Assembly Engineer',
+        'exp3.desc': 'Supervisor of piping assembly teams in pipe rack modules. Resolved clashes with electrical, instrumentation, outfitting and structural sectors. Executed design changes per client orders and participated in vessel safety committee meetings.',
+        'exp3.date': 'Apr 2014 — Jul 2016',
 
-      </div>
+        'education.label': 'Academic background',
+        'edu.specialist': 'Specialist',
+        'edu1.field': 'Software Engineering',
+        'edu2.field': 'Energy Efficiency in Industry',
+        'edu3.degree': "Bachelor's Degree",
+        'edu3.field': 'Chemical Engineering',
 
-    </section>
+        'skills.label': 'What I work with',
+        'skills.tools': 'Programming Languages & Tools',
+        'skills.profile': 'Coding profile',
+        'skill1': 'Simple, clean and maintainable code',
+        'skill2': 'Unit tests & debugging',
+        'skill3': 'Happy to help other peers',
+        'skill4': 'Agile development & Scrum',
+        'skill5': 'Remote Worker Certified',
+        'skill6': 'Portuguese, English and Spanish speaker',
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-      <div class="my-auto">
-        <h2 class="mb-5">Education</h2>
+        'interests.label': 'Beyond the screen',
+        'interests.p1': 'Apart from being a developer, I enjoy most of my time being outdoors and exercising. I enjoy resistance training, running and hobby carpentry. I like to travel to different countries and get in contact with different people and cultures.',
+        'interests.p2': 'When forced indoors, I follow a number of books, mostly of sci-fi and fantasy. I enjoy making a traditional Brazilian barbecue and spending time with my family and friends. I spend a large amount of my free time exploring the latest advancements in back-end web development.',
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Faculdade Focus (CENES)</h3>
-            <div class="subheading mb-3">Specialist</div>
-            <div>Software Engineering, Engineering</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">September 2024 - February 2025</span>
-          </div>
-        </div>
+        'courses.label': 'Learning & growth',
+        'nav.courses': 'Courses',
+        'course1.name': 'Remote Work Professional Certification',
+        'course1.meta': 'Issued Jun 2023 · Expires Jun 2026 · ID 86340518',
+        'course2.name': 'Concepts and Best Practices with PostgreSQL',
+        'course2.meta': 'Issued Sep 2022 · ID 6CCA2181',
+        'course3.name': 'API REST with Spring Security',
+        'course3.meta': 'Issued Aug 2022 · ID C97520B4',
+        'course4.name': 'Design Patterns with Java and Spring Boot',
+        'course4.meta': 'Issued Aug 2022 · ID F63A0FF5',
+        'course5.name': 'JPA and Hibernate',
+        'course5.meta': 'Issued Aug 2022 · ID 4AFCD6E0',
+        'course6.name': 'Communication Protocols in the Internet',
+        'course6.meta': 'Issued Aug 2022 · ID 070472A7',
+        'course7.name': 'API Fundamentals and HTTP Methods',
+        'course7.meta': 'Issued Jan 2022 · ID 0FAE1CE0',
+        'course8.name': 'Linux Terminal',
+        'course8.meta': 'Issued Jan 2022 · ID 83XN22',
+        'course9.name': 'Data Structures in Java',
+        'course9.meta': 'Issued Dec 2021 · ID A05A1292',
+        'course10.name': 'Scrum Fundamentals Certified',
+        'course10.meta': 'Issued Jan 2016 · ID 102425',
+      },
 
-        <div class="resume-item d-flex flex-column flex-md-row mb-5">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Serviço Nacional de Aprendizagem Industrial (SENAI)</h3>
-            <div class="subheading mb-3">Specialist</div>
-            <div>Energy efficiency in industry, Engineering</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">March 2017 - December 2019</span>
-          </div>
-        </div>
+      pt: {
+        role: 'Desenvolvedor de Software',
+        'nav.about': 'Sobre',
+        'nav.experience': 'Experiência',
+        'nav.education': 'Formação',
+        'nav.skills': 'Habilidades',
+        'nav.interests': 'Interesses',
+        'nav.courses': 'Cursos',
 
-        <div class="resume-item d-flex flex-column flex-md-row">
-          <div class="resume-content mr-auto">
-            <h3 class="mb-0">Universidade Estadual de Maringá</h3>
-            <div class="subheading mb-3">Bachelor's degree - Engineering</div>
-            <div>Chemical Engineer</div>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">February 2009 - December 2013</span>
-          </div>
-        </div>
+        'about.label': 'Olá, eu sou',
+        'about.bio': 'Sou desenvolvedor de software — e engenheiro químico — com foco em backend. Quero escrever código do qual me orgulhe e causar uma mudança positiva no mundo por meio da tecnologia.',
 
-      </div>
-    </section>
+        'experience.label': 'Histórico profissional',
+        'exp1.title': 'Desenvolvedor de Software',
+        'exp1.desc': 'Desenvolvedor backend em uma aplicação desktop Java para o setor farmacêutico no Brasil. Atuando no desenvolvimento de novas funcionalidades, correção de bugs e integração de novos membros à equipe. Utilizando Java 17, PostgreSQL, SQLite, Git, Jira e metodologias ágeis.',
+        'exp1.date': 'Fev 2022 — Atual',
+        'exp2.title': 'Gerente de Contas',
+        'exp2.desc': 'Suporte a clientes ao longo de toda a experiência de consumo, com gestão e revisão de contratos, análise de infraestrutura técnica e satisfação do cliente.',
+        'exp2.date': 'Abr 2017 — Out 2021',
+        'exp3.title': 'Engenheiro de Montagem de Tubulação',
+        'exp3.desc': 'Supervisor de equipes de montagem de tubulação em módulos de pipe rack. Resolução de conflitos com setores de elétrica, instrumentação, outfitting e estrutura. Execução de alterações de projeto conforme ordens do cliente e participação em reuniões do comitê de segurança da embarcação.',
+        'exp3.date': 'Abr 2014 — Jul 2016',
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-      <div class="my-auto">
-        <h2 class="mb-5">Skills</h2>
+        'education.label': 'Formação acadêmica',
+        'edu.specialist': 'Especialista',
+        'edu1.field': 'Engenharia de Software',
+        'edu2.field': 'Eficiência Energética na Indústria',
+        'edu3.degree': 'Bacharelado',
+        'edu3.field': 'Engenharia Química',
 
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline list-icons">
-          <li class="list-inline-item">
-            <i class="devicons devicons-linux"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-java"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-javascript"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-git"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-postgresql"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-github_alt"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-sqllite"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-python"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="devicons devicons-docker"></i>
-          </li>
+        'skills.label': 'Com o que trabalho',
+        'skills.tools': 'Linguagens de Programação e Ferramentas',
+        'skills.profile': 'Perfil de desenvolvimento',
+        'skill1': 'Código simples, limpo e de fácil manutenção',
+        'skill2': 'Testes unitários e depuração',
+        'skill3': 'Disponível para ajudar colegas',
+        'skill4': 'Desenvolvimento ágil e Scrum',
+        'skill5': 'Certificado em Trabalho Remoto',
+        'skill6': 'Falante de Português, Inglês e Espanhol',
 
-        </ul>
+        'interests.label': 'Além da tela',
+        'interests.p1': 'Além de ser desenvolvedor, gosto de passar a maior parte do meu tempo ao ar livre e me exercitando. Pratico musculação, corrida e marcenaria como hobby. Gosto de viajar para diferentes países e entrar em contato com diferentes pessoas e culturas.',
+        'interests.p2': 'Quando dentro de casa, leio bastante, principalmente ficção científica e fantasia. Gosto de fazer um churrasco tradicional brasileiro e passar tempo com minha família e amigos. Grande parte do meu tempo livre é dedicado a explorar os avanços mais recentes no desenvolvimento web backend.',
 
-        <div class="subheading mb-3">Coding profile</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Simple, clean and maintainable code
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Unit tests &amp; Debugging
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Happy to help other peers
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Agile Development &amp; Scrum
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Remote Worker Certified
-          </li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Portuguese, English and Spanish speaker
-          </li>
-        </ul>
-      </div>
-    </section>
+        'courses.label': 'Aprendizado e crescimento',
+        'course1.name': 'Certificação Profissional em Trabalho Remoto',
+        'course1.meta': 'Emitido Jun 2023 · Expira Jun 2026 · ID 86340518',
+        'course2.name': 'Conceitos e Boas Práticas com PostgreSQL',
+        'course2.meta': 'Emitido Set 2022 · ID 6CCA2181',
+        'course3.name': 'API REST com Spring Security',
+        'course3.meta': 'Emitido Ago 2022 · ID C97520B4',
+        'course4.name': 'Padrões de Projeto com Java e Spring Boot',
+        'course4.meta': 'Emitido Ago 2022 · ID F63A0FF5',
+        'course5.name': 'JPA e Hibernate',
+        'course5.meta': 'Emitido Ago 2022 · ID 4AFCD6E0',
+        'course6.name': 'Protocolos de Comunicação na Internet',
+        'course6.meta': 'Emitido Ago 2022 · ID 070472A7',
+        'course7.name': 'Fundamentos de API e Métodos HTTP',
+        'course7.meta': 'Emitido Jan 2022 · ID 0FAE1CE0',
+        'course8.name': 'Terminal Linux',
+        'course8.meta': 'Emitido Jan 2022 · ID 83XN22',
+        'course9.name': 'Estruturas de Dados em Java',
+        'course9.meta': 'Emitido Dez 2021 · ID A05A1292',
+        'course10.name': 'Scrum Fundamentals Certified',
+        'course10.meta': 'Emitido Jan 2016 · ID 102425',
+      },
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-      <div class="my-auto">
-        <h2 class="mb-5">Interests</h2>
-        <p>Apart from being a developer, I enjoy most of my time being outdoors and exercising. I enjoy mountain biking, capoeira and
-          resistence training. I like to travel to different countries and get in contact with different people and culture.</p>
-        <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows.
-          I like to make a traditional brazilian barbecue and stay with my friends too. I spend a large amount of my free time exploring the latest technology advancements
-          in the back-end web development world.</p>
-      </div>
-    </section>
+      es: {
+        role: 'Desarrollador de Software',
+        'nav.about': 'Sobre mí',
+        'nav.experience': 'Experiencia',
+        'nav.education': 'Educación',
+        'nav.skills': 'Habilidades',
+        'nav.interests': 'Intereses',
+        'nav.courses': 'Cursos',
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="Courses">
-      <div class="my-auto">
-        <h2 class="mb-5">Courses &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            Remote Work Professional Certification - CertiProf International <br>
-            Issued Jun 2023 · Expires Jun 2026 <br>
-            Credential ID 86340518 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            Concepts and Best Practices with PostgreSQL database - Digital Innovation One <br>
-            Issued Sep 2022  <br>
-            Credential ID 6CCA2181 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            API REST with Spring Security - Digital Innovation One <br>
-            Issued Aug 2022  <br>
-            Credential ID C97520B4 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            Design Patterns with Java and Spring Boot - Digital Innovation One <br>
-            Issued Aug 2022  <br>
-            Credential ID F63A0FF5 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            JPA and Hibernate - Digital Innovation One <br>
-            Issued Aug 2022  <br>
-            Credential ID 4AFCD6E0 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            Communication Protocols in the internet - Digital Innovation One <br>
-            Issued Aug 2022  <br>
-            Credential ID 070472A7 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            API fundamentals and HTTP methods - Digital Innovation One <br>
-            Issued Jan 2022  <br>
-            Credential ID 0FAE1CE0 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            Linux Terminal - Prof. Diego Mariano <br>
-            Issued Jan 2022  <br>
-            Credential ID 83XN22 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            Data structures in Java - Digital Innovation One <br>
-            Issued Dec 2021  <br>
-            Credential ID A05A1292 <br>
-          </li>
-          <li>
-            <i class="fa-li fa icon-book-open text-warning"></i>
-            Scrum Fundamentals Certified - SCRUMstudy <br>
-            Issued Jan 2016  <br>
-            Credential ID 102425 <br>
-          </li>
-        </ul>
-      </div>
-    </section>
+        'about.label': 'Hola, soy',
+        'about.bio': 'Soy desarrollador de software — e ingeniero químico — enfocado en el backend. Quiero escribir código del que me sienta orgulloso y generar un cambio positivo en el mundo a través de la tecnología.',
 
-  </div>
+        'experience.label': 'Trayectoria profesional',
+        'exp1.title': 'Desarrollador de Software',
+        'exp1.desc': 'Desarrollador backend en una aplicación de escritorio Java para la industria farmacéutica en Brasil. Trabajo en nuevas funcionalidades, corrección de errores e integración de nuevos miembros al equipo. Utilizando Java 17, PostgreSQL, SQLite, Git, Jira y metodologías ágiles.',
+        'exp1.date': 'Feb 2022 — Presente',
+        'exp2.title': 'Gerente de Cuentas',
+        'exp2.desc': 'Atención a clientes a lo largo de toda la experiencia de consumo, gestionando contratos, analizando infraestructura técnica y asegurando la satisfacción del cliente.',
+        'exp2.date': 'Abr 2017 — Oct 2021',
+        'exp3.title': 'Ingeniero de Montaje de Tuberías',
+        'exp3.desc': 'Supervisor de equipos de montaje de tuberías en módulos de pipe rack. Resolución de conflictos con sectores de eléctrica, instrumentación, outfitting y estructura. Ejecución de cambios de diseño según órdenes del cliente y participación en reuniones del comité de seguridad de la embarcación.',
+        'exp3.date': 'Abr 2014 — Jul 2016',
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        'education.label': 'Formación académica',
+        'edu.specialist': 'Especialista',
+        'edu1.field': 'Ingeniería de Software',
+        'edu2.field': 'Eficiencia Energética en la Industria',
+        'edu3.degree': 'Licenciatura',
+        'edu3.field': 'Ingeniería Química',
 
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        'skills.label': 'Con qué trabajo',
+        'skills.tools': 'Lenguajes de Programación y Herramientas',
+        'skills.profile': 'Perfil de desarrollo',
+        'skill1': 'Código simple, limpio y mantenible',
+        'skill2': 'Pruebas unitarias y depuración',
+        'skill3': 'Dispuesto a ayudar a compañeros',
+        'skill4': 'Desarrollo ágil y Scrum',
+        'skill5': 'Certificado en Trabajo Remoto',
+        'skill6': 'Hablante de Portugués, Inglés y Español',
 
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-<div align=center><a href='https://contador.s12.com.br'><img src='https://contador.s12.com.br/img-CZZwz4yW9ZYzZBw7-57.gif' border='0' alt='contador de visitas'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=CZZwz4yW9ZYzZBw7'></script></div>
+        'interests.label': 'Más allá de la pantalla',
+        'interests.p1': 'Además de ser desarrollador, disfruto pasar la mayor parte de mi tiempo al aire libre y haciendo ejercicio. Me gustan el entrenamiento de fuerza, correr y la carpintería como pasatiempo. Me gusta viajar a diferentes países y conocer personas y culturas distintas.',
+        'interests.p2': 'Cuando estoy en casa, leo bastante, principalmente ciencia ficción y fantasía. Me gusta hacer un asado brasileño tradicional y pasar tiempo con mi familia y amigos. Dedico gran parte de mi tiempo libre a explorar los últimos avances en el desarrollo web backend.',
+
+        'courses.label': 'Aprendizaje y crecimiento',
+        'course1.name': 'Certificación Profesional en Trabajo Remoto',
+        'course1.meta': 'Emitido Jun 2023 · Expira Jun 2026 · ID 86340518',
+        'course2.name': 'Conceptos y Buenas Prácticas con PostgreSQL',
+        'course2.meta': 'Emitido Sep 2022 · ID 6CCA2181',
+        'course3.name': 'API REST con Spring Security',
+        'course3.meta': 'Emitido Ago 2022 · ID C97520B4',
+        'course4.name': 'Patrones de Diseño con Java y Spring Boot',
+        'course4.meta': 'Emitido Ago 2022 · ID F63A0FF5',
+        'course5.name': 'JPA e Hibernate',
+        'course5.meta': 'Emitido Ago 2022 · ID 4AFCD6E0',
+        'course6.name': 'Protocolos de Comunicación en Internet',
+        'course6.meta': 'Emitido Ago 2022 · ID 070472A7',
+        'course7.name': 'Fundamentos de API y Métodos HTTP',
+        'course7.meta': 'Emitido Ene 2022 · ID 0FAE1CE0',
+        'course8.name': 'Terminal Linux',
+        'course8.meta': 'Emitido Ene 2022 · ID 83XN22',
+        'course9.name': 'Estructuras de Datos en Java',
+        'course9.meta': 'Emitido Dic 2021 · ID A05A1292',
+        'course10.name': 'Scrum Fundamentals Certified',
+        'course10.meta': 'Emitido Ene 2016 · ID 102425',
+      }
+    };
+
+    // ─── Apply translation ────────────────────────────────────────────────────
+    function applyLang(lang) {
+      const dict = i18n[lang];
+      if (!dict) return;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) el.textContent = dict[key];
+      });
+
+      // Update <html lang> attribute
+      document.documentElement.lang = lang;
+
+      // Update page title
+      const titles = { en: 'Vinícius Beraldo — Developer', pt: 'Vinícius Beraldo — Desenvolvedor', es: 'Vinícius Beraldo — Desarrollador' };
+      document.title = titles[lang];
+
+      // Update active button state across ALL switchers
+      document.querySelectorAll('[data-lang]').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      // Persist choice
+      localStorage.setItem('lang', lang);
+    }
+
+    // ─── Bind all language buttons ────────────────────────────────────────────
+    document.querySelectorAll('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => applyLang(btn.getAttribute('data-lang')));
+    });
+
+    // ─── Init: restore saved lang or default to 'en' ─────────────────────────
+    const savedLang = localStorage.getItem('lang') || 'en';
+    applyLang(savedLang);
+
+    // ─── Mobile nav toggle ────────────────────────────────────────────────────
+    const toggler = document.getElementById('navToggler');
+    const navLinks = document.getElementById('navLinks');
+    toggler.addEventListener('click', () => navLinks.classList.toggle('show'));
+
+    // ─── Smooth scroll + close menu ──────────────────────────────────────────
+    document.querySelectorAll('.js-scroll-trigger').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        navLinks.classList.remove('show');
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // ─── Active nav on scroll ─────────────────────────────────────────────────
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.navbar-nav .nav-link');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navItems.forEach(n => n.classList.remove('active'));
+          const active = document.querySelector(`.navbar-nav .nav-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
 </body>
 
 </html>
